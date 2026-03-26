@@ -30,7 +30,7 @@ export default function HomePage() {
       >
         <div className="container">
           <div style={{ maxWidth: "720px" }}>
-            {/* Trust badges */}
+            {/* Trust badges — real credentials */}
             <div
               style={{
                 display: "flex",
@@ -39,7 +39,7 @@ export default function HomePage() {
                 marginBottom: "1.5rem",
               }}
             >
-              {["Licensed", "Insured", "Local"].map((badge) => (
+              {["5x Award-Winning", "Master Builders", "$20M Insured", "Est. 2016"].map((badge) => (
                 <span
                   key={badge}
                   style={{
@@ -131,6 +131,65 @@ export default function HomePage() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          STATS BAR — Awards & credentials
+          ============================================================ */}
+      <section
+        style={{
+          backgroundColor: "var(--color-accent)",
+          padding: "2rem 0",
+        }}
+      >
+        <div
+          className="container"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+            gap: "1.5rem",
+            textAlign: "center",
+          }}
+        >
+          {[
+            { number: "5x", label: "Top 10 Roofer Adelaide", sub: "2018 – 2022" },
+            { number: "10+", label: "Years Experience", sub: "Since 2016" },
+            { number: "4.8", label: "Star Rating", sub: "16 Verified Reviews" },
+            { number: "$20M", label: "Public Liability", sub: "Fully Insured" },
+          ].map((stat) => (
+            <div key={stat.label}>
+              <div
+                style={{
+                  fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
+                  fontWeight: 800,
+                  color: "#FFFFFF",
+                  lineHeight: 1,
+                }}
+              >
+                {stat.number}
+              </div>
+              <div
+                style={{
+                  fontSize: "0.875rem",
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,0.95)",
+                  marginTop: "0.25rem",
+                }}
+              >
+                {stat.label}
+              </div>
+              <div
+                style={{
+                  fontSize: "0.75rem",
+                  color: "rgba(255,255,255,0.7)",
+                  marginTop: "0.125rem",
+                }}
+              >
+                {stat.sub}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 export const siteConfig = {
   businessName: "Roof Shield Restoration",
-  tagline: "Adelaide's Roof Restoration Specialists",
+  tagline: "5x Award-Winning Roof Restoration — Adelaide",
   phone: "0478 710 798",
   email: "info@getroofshield.com.au",
   address: "Adelaide, SA",
